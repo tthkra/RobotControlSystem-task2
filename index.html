@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Robot Control Panel</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+
+        <form method="POST" action="http://localhost/script.php" target="dummyframe">
+            Direction:
+            <select name="directions">
+                <option value="forward">Forward</option>
+                <option value="left">Left</option>
+                <option value="stop">Stop</option>
+                <option value="right">Right</option>
+                <option value="backward">Backward</option>
+              </select>
+
+              &nbsp;Distance in meters:
+              <input type="text" name="distance">  
+              &nbsp;
+              <button type="submit" name="submit">Enter</button>
+        </form>
+
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
